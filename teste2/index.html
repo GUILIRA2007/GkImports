@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">]
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>GK IMPORTS - Venda de Embarcações</title>
+
+</head>
+
+<body>
+    <!-- Tela de Login, adicionamos uma função que quando colocamos a senha que defenimos ela
+    entra na pagina inicial, caso contratrio ele dira um
+    alerta dizendo que a senha esta incorreta -->
+    <div id="login-screen">
+
+        <div class="login-box">
+            <h2>LOGIN GK Imports</h2>
+            <p style="margin-bottom: 15px; font-size: 14px;"></b></p>
+            <input type="text" id="usernameInput" placeholder="Digite o usuário" style="margin-bottom:10px;">
+            <input type="password" id="passwordInput" placeholder="Digite a senha">
+            <button onclick="checkLogin()">Entrar</button>
+            <p id="error-msg" class="error-msg">Senha incorreta!</p>
+        </div>
+    </div>
+
+    <div id="main-site">
+        <header>
+            <!-- Aqui esta a nossa nav bar onde temos: -->
+            <h1>GK IMPORTS Lira</h1>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#embarcacoes">Embarcações</a>
+                <a href="anunciar.html">Anunciar Embarcação</a>
+                <a href="#contato">Contato</a>
+                <a href="#" onclick="logout()" style="color: #ff4136;">Sair</a>
+            </nav>
+        </header>
+
+        <section id="sobre">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div style="text-align: center; font-size: 1.1rem; line-height: 1.6;">
+                <p><strong>Bem-vindo à GkImports, a sua parceira de confiança no mundo náutico.</strong></p>
+
+                <p><strong>Especializados na compra e venda de embarcações de luxo e lazer, conectamos apaixonados pelo
+                        mar às melhores oportunidades do mercado.</strong></p>
+
+                <p><strong>Nossa missão é proporcionar experiências únicas, oferecendo embarcações de alta qualidade e
+                        um atendimento personalizado.</strong></p>
+
+                <img src="bem vindo.jpeg" alt="foto de boas vindas"
+                    style="margin-top: 20px; max-width: 100%; height: auto; border-radius: 8px;">
+
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="embarcacoes">
+            <h2 class="section-title">Nossas Embarcações</h2>
+            <div class="boats-grid">
+                <div class="boat-card">
+                    <div class="boat-img"><img src="https://via.placeholder.com/400x200?text=Lancha+Sport" alt="Lancha">
+                    </div>
+                    <div class="boat-info">
+                        <h3>Lancha Sport 300</h3>
+                        <p class="boat-price">R$ 250.000,00</p>
+                        <p>Ano 2022 | 30 Pés | Motor Mercury</p>
+                        <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Ver Detalhes</button>
+                    </div>
+                </div>
+                <div class="boat-card">
+                    <div class="boat-img"><img src="https://via.placeholder.com/400x200?text=Veleiro+Ocean"
+                            alt="Veleiro"></div>
+                    <div class="boat-info">
+                        <h3>Veleiro Ocean Master</h3>
+                        <p class="boat-price">R$ 480.000,00</p>
+                        <p>Ano 2020 | 42 Pés | Completo</p>
+                        <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Ver Detalhes</button>
+                    </div>
+                </div>
+                <div class="boat-card">
+                    <div class="boat-img"><img src="https://via.placeholder.com/400x200?text=Jet+Ski+Turbo"
+                            alt="Jet Ski"></div>
+                    <div class="boat-info">
+                        <h3>Jet Ski Turbo X</h3>
+                        <p class="boat-price">R$ 85.000,00</p>
+                        <p>Ano 2024 | 3 Lugares | Zero Km</p>
+                        <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="anunciar" style="background-color: #e8e8e8;">
+            <h2 class="section-title">Anuncie Sua Embarcação</h2>
+            <form onsubmit="event.preventDefault(); alert('Anúncio enviado para análise!');">
+                <label>Modelo da Embarcação:</label>
+                <input type="text" required>
+
+                <label>Preço Sugerido (R$):</label>
+                <input type="number" required>
+
+                <label>Descrição:</label>
+                <textarea rows="4"></textarea>
+
+                <button type="submit">Enviar Anúncio</button>
+            </form>
+        </section>
+
+        <section id="contato">
+            <h2 class="section-title">Fale Conosco</h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div>
+                    <h3>Localização</h3>
+                    <p>Rua Sebastião Interraminse, Loja 05</p>
+                    <p>João Pessoa - PB</p>
+                </div>
+                <div>
+                    <h3>Contatos</h3>
+                    <p>Email: GkImports@gmail.com</p>
+                    <p>Tel: (83) 999491321-1321</p>
+                </div>
+            </div>
+        </section>
+
+       <div class="footer-container">
+    <div class="footer-col">
+        <h3>GkImports</h3>
+        <p>Conectando você às melhores experiências náuticas.</p>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/SEU_USUARIO_AQUI" target="_blank" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white;">
+                Instagram
+            </a>
+            
+            <a href="https://facebook.com/SEU_USUARIO" target="_blank" style="background: #1877F2; color: white;">
+                Facebook
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-col">
+        <h3>Navegação</h3>
+        <ul>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#embarcacoes">Estoque</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h3>Fale Conosco</h3>
+        <p>📍 Av. Cabo Branco, João Pessoa - PB</p>
+        
+        <p>
+            <a href="https://wa.me/5583999999999?text=Olá,%20tenho%20interesse%20em%20uma%20embarcação" target="_blank" style="text-decoration: none; color: #25D366; font-weight: bold; font-size: 16px;">
+                📞 (83) 99999-9999 (WhatsApp)
+            </a>
+        </p>
+        
+        <p>📧 contato@gkimports.com</p>
+    </div>
+</div>
+    </div>
+
+
+</body>
+
+</html>
