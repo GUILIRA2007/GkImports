@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*TELA DE LOGIN*/
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #001f3f, #0074D9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #001f3f;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    display: none;
+}
+
+/*  index  */
+#main-site {
+    display: none;
+    
+}
+
+header {
+    background-color: #001f3f;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #7FDBFF;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #001f3f;
+    font-size: 2.5rem;
+}
+
+/* onde mechemos as areas de embarções */
+.boats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.boat-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.boat-card:hover {
+    transform: translateY(-5px);
+}
+
+.boat-img {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.boat-info {
+    padding: 20px;
+}
+
+.boat-price {
+    color: #2ECC40;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Formulários */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #001f3f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+ footer{
+    background-color: #05070a;
+ }
+footer {
+    background: linear-gradient(to bottom, #0a0e14, #000000); /* Degradê sutil para o preto */
+    color: #b0b8c0; /* Cinza azulado, mais elegante que cinza puro */
+    padding-top: 60px;
+    margin-top: 80px;
+    border-top: 4px solid #0074D9; /* A linha azul agora brilha */
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); /* Sombra para separar do site */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px 50px 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding-right: 30px;
+}
+
+/* Títulos das colunas */
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase; /* Letras maiúsculas para autoridade */
+    letter-spacing: 1px; /* Espaçamento chique entre letras */
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+/* O detalhe azul embaixo do título */
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background-color: #0074D9;
+    border-radius: 2px; /* Pontas arredondadas na linha */
+}
+
+.footer-col p {
+    line-height: 1.8; /* Texto mais "respirável" */
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* --- Lista de Links com Efeito de Seta --- */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #b0b8c0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+}
+
+/* Adiciona uma setinha (›) automática antes do link quando passa o mouse */
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 15px; /* Empurra o texto */
+    text-shadow: 0 0 10px rgba(0, 116, 217, 0.5); /* Brilho azul leve */
+}
+
+.footer-col ul li a::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    opacity: 0; /* Invisível normalmente */
+    color: #0074D9;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.footer-col ul li a:hover::before {
+    opacity: 1; /* Aparece a seta ao passar o mouse */
+}
+
+/* --- Botões Sociais --- */
+.social-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; /* Botões redondinhos (Pill shape) */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra no botão */
+}
+
+.social-links a:hover {
+    transform: translateY(-3px); /* Sobe um pouquinho */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+    filter: brightness(1.1); /* Fica levemente mais brilhante */
+}
+
+/* --- Copyright --- */
+.footer-bottom {
+    background-color: #05070a; /* Quase preto */
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #1f2933;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.footer-bottom strong {
+    color: #0074D9; /* Destaca seu nome em azul */
+}
